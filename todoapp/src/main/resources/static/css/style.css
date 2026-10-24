@@ -1,0 +1,190 @@
+/* ---------- Base styles ---------- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6fb;
+    color: #1e293b;
+    line-height: 1.5;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+/* ---------- Header ---------- */
+.header {
+    padding: 32px 20px;
+    text-align: center;
+    background: #1e293b;
+    color: white;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    margin: 6px 0 0;
+    color: #cbd5e1;
+}
+
+/* ---------- Main layout ---------- */
+.container {
+    width: min(100% - 32px, 720px);
+    margin: 40px auto;
+}
+
+.task-form-section,
+.task-list-section {
+    margin-bottom: 24px;
+    padding: 24px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgb(15 23 42 / 5%);
+}
+
+h2 {
+    margin: 0 0 18px;
+    font-size: 1.25rem;
+}
+
+/* ---------- Task form ---------- */
+#task-form {
+    display: grid;
+    gap: 12px;
+}
+
+#task-title,
+#task-description {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: white;
+    color: #1e293b;
+}
+
+#task-description {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#task-title:focus,
+#task-description:focus {
+    outline: 2px solid #93c5fd;
+    border-color: #2563eb;
+}
+
+button {
+    padding: 11px 16px;
+    border: 0;
+    border-radius: 8px;
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+button:hover {
+    background: #1d4ed8;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ---------- Task list ---------- */
+#task-count {
+    margin: -8px 0 16px;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+#task-list {
+    display: grid;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* ---------- Responsive layout ---------- */
+@media (max-width: 480px) {
+    .container {
+        margin: 20px auto;
+    }
+
+    .task-form-section,
+    .task-list-section {
+        padding: 18px;
+    }
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+}
+
+.task-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    cursor: pointer;
+    accent-color: #2563eb;
+}
+
+.task-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-details h3 {
+    margin: 0;
+    font-size: 1rem;
+    overflow-wrap: anywhere;
+}
+
+.task-details h3.completed {
+    color: #94a3b8;
+    text-decoration: line-through;
+}
+
+.task-details p {
+    margin: 4px 0 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    overflow-wrap: anywhere;
+}
+
+.delete-button {
+    background: #fee2e2;
+    color: #b91c1c;
+    flex-shrink: 0;
+}
+
+.delete-button:hover {
+    background: #fecaca;
+}
+
+@media (max-width: 480px) {
+    .task-item {
+        gap: 8px;
+        padding: 12px;
+    }
+}
+
