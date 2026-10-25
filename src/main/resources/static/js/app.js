@@ -13,7 +13,6 @@ async function loadTasks() {
         if (!response.ok) {
             throw new Error("Failed to load tasks");
         }
-
         const tasks = await response.json();
         renderTasks(tasks);
     } catch (error) {
@@ -138,7 +137,6 @@ taskForm.addEventListener("submit", async event => {
         if (!response.ok) {
             throw new Error("Failed to create task");
         }
-
         taskForm.reset();
         await loadTasks();
     } catch (error) {
@@ -146,5 +144,4 @@ taskForm.addEventListener("submit", async event => {
         console.error(error);
     }
 });
-
 loadTasks();
