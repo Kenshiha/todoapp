@@ -21,6 +21,9 @@ async function loadTasks() {
     }
 }
 
+async function updatetask(){
+}
+
 function renderTasks(tasks) {
     taskList.replaceChildren();
 
