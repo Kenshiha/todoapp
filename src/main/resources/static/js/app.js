@@ -21,7 +21,7 @@ async function loadTasks() {
     }
 }
 
-async function updatetask(){
+async function edittask(){
 }
 
 function renderTasks(tasks) {
